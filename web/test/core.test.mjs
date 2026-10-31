@@ -7,6 +7,15 @@ test('官方工资与居民结余口径分开，年转月不提前取整',()=>{c
 test('个人收支、零收入、零结余和负结余',()=>{assert.equal(c.financial(10000,data.baseline,{income:6000,expense:3500}).savingMonths,4);assert.equal(c.financial(10000,data.baseline,{income:6000,expense:6000}).savingMonths,null);assert.equal(c.financial(10000,data.baseline,{income:0,expense:1000}).earningMonths,null);assert.equal(c.financial(10000,data.baseline,{income:6000,expense:7000}).savingMonths,null)});
 test('小数价格按分计算，没有浮点少买一件',()=>{assert.equal(c.quantity(.3,.1),3);assert.equal(c.quantity(10000,15),666);assert.equal(c.quantity(.01,65),0);assert.equal(c.quantity(100,0),0);assert.equal(c.quantity(100,.001),0)});
 
+test('消费频率按包装份量换算天数，电影按365天转成年',()=>{
+ const basis=type=>data.references.find(g=>g[4]===type)[5];
+ assert.equal(c.usage(4000,basis('movie')).days,4000);assert.match(c.usage(4000,basis('movie')).text,/每天看1场电影.*约11年/);
+ assert.equal(c.usage(3,basis('rice')).days,50);assert.match(c.usage(3,basis('rice')).text,/每天三顿.*50天/);
+ assert.equal(c.usage(2,basis('egg')).days,10);assert.equal(c.usage(10,basis('bus')).days,5);
+ assert.equal(c.usage(0,basis('movie')),null);assert.equal(c.usage(2,{}),null);assert.match(c.usage(2,basis('phone')).text,/每天换1个.*2天不重复/);
+ assert.match(c.usage(1,{usage:{usesPerUnit:1,perDay:3,frequency:'每天用3次',action:'连续用'}}).text,/不足1天/);
+});
+
 test('随机比较跨品类、无重复且优先可负担物品',()=>{
  for(let i=0;i<80;i++){
   const goods=c.selectGoods(10000,data.references);
@@ -14,6 +23,15 @@ test('随机比较跨品类、无重复且优先可负担物品',()=>{
   assert.ok(goods.every(g=>g[2]<=10000));assert.ok(goods.filter(g=>g[5].category==='daily').length<=2);
   assert.ok(new Set(goods.map(g=>g[5].category)).size>=6);
  }
+});
+
+test('耐用品按每天换用一件展示不重复时长，保留消耗品表达',()=>{
+ for(const [type,frequency] of [['bicycle','每天骑1辆'],['shoes','每天穿1双'],['racket','每天用1支']]){
+  const basis=data.references.find(g=>g[4]===type)[5];
+  assert.equal(c.usage(30,basis).days,30);assert.match(c.usage(30,basis).text,new RegExp(frequency+'.*30天不重复'));
+  assert.match(c.usage(730,basis).text,/约2年不重复/);assert.equal(c.usage(0,basis),null);
+ }
+ assert.doesNotMatch(c.usage(30,data.references.find(g=>g[4]==='movie')[5]).text,/不重复/);
 });
 test('达到Duo价格必含台数比较，低于报价不抽中',()=>{
  const duo=data.references.find(g=>g[0]==='iPhone Duo');

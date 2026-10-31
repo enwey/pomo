@@ -19,6 +19,13 @@ globalThis.PomoCore=Object.freeze({
     return {income,savingIncome,expense,surplus:savingIncome-expense,earningMonths:income>0?amount/income:null,savingMonths:savingIncome>expense?amount/(savingIncome-expense):null};
   },
   quantity(amount,price){const cents=Math.round(price*100);return Number.isFinite(amount)&&Number.isFinite(price)&&cents>0?Math.floor((Math.round(amount*100)+1e-7)/cents):0},
+  usage(quantity,basis){
+    const u=basis?.usage;
+    if(!u||!Number.isFinite(quantity)||quantity<1||!Number.isFinite(u.usesPerUnit)||u.usesPerUnit<=0||!Number.isFinite(u.perDay)||u.perDay<=0||typeof u.frequency!=='string'||typeof u.action!=='string')return null;
+    const days=quantity*u.usesPerUnit/u.perDay;
+    const span=days>=365?'约'+new Intl.NumberFormat('zh-CN',{maximumFractionDigits:1}).format(days/365)+'年':'约'+new Intl.NumberFormat('zh-CN',{maximumFractionDigits:1}).format(days)+'天';
+    return {days,text:days<1?`如果${u.frequency}，还不足1天的用量。`:u.mode==='rotation'?`如果${u.frequency}，可以连续${span}不重复。`:`如果${u.frequency}，可以${u.action}${span}。`,note:u.note||'频率仅为换算场景，不是使用建议。'};
+  },
   selectGoods(amount,pool,previous=[],random=Math.random){
     const shuffle=rows=>{const copy=[...rows];for(let i=copy.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[copy[i],copy[j]]=[copy[j],copy[i]]}return copy};
     const unique=[...new Map(pool.filter(g=>g[0]!=='iPhone Duo'||g[2]<=amount).map(g=>[g[0],g])).values()],affordable=unique.filter(g=>g[2]<=amount);

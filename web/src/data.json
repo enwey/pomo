@@ -1,5 +1,5 @@
 {
-  "version": "2026-10-31.2",
+  "version": "2026-10-31.4",
   "checkedAt": "2026-10-31",
   "baseline": {
     "year": 2025,
@@ -34,7 +34,14 @@
         "kind": "budget",
         "title": "生活预算参照",
         "note": "内置参考预算，不是全国均价或实时报价。",
-        "category": "daily"
+        "category": "daily",
+        "usage": {
+          "usesPerUnit": 50,
+          "perDay": 3,
+          "frequency": "每天三顿都煮饭",
+          "action": "连续吃",
+          "note": "场景假设：每顿使用100克生米，5千克一袋可做50份米饭，每天3份。只计算米饭，不包含其他食材；不是膳食建议。"
+        }
       }
     ],
     [
@@ -47,7 +54,14 @@
         "kind": "budget",
         "title": "生活预算参照",
         "note": "内置参考预算，不是全国均价或实时报价。",
-        "category": "daily"
+        "category": "daily",
+        "usage": {
+          "usesPerUnit": 1,
+          "perDay": 1,
+          "frequency": "每天喝1盒",
+          "action": "连续喝",
+          "note": "按250毫升一盒、每天1盒换算，仅为频率假设。"
+        }
       }
     ],
     [
@@ -60,7 +74,14 @@
         "kind": "budget",
         "title": "生活预算参照",
         "note": "内置参考预算，不是全国均价或实时报价。",
-        "category": "daily"
+        "category": "daily",
+        "usage": {
+          "usesPerUnit": 10,
+          "perDay": 2,
+          "frequency": "每天吃2枚鸡蛋",
+          "action": "连续吃",
+          "note": "按每盒10枚、每天2枚换算，仅为频率假设，不是膳食建议。"
+        }
       }
     ],
     [
@@ -73,7 +94,14 @@
         "kind": "budget",
         "title": "生活预算参照",
         "note": "内置参考预算，不是全国均价或实时报价。",
-        "category": "daily"
+        "category": "daily",
+        "usage": {
+          "usesPerUnit": 5,
+          "perDay": 1,
+          "frequency": "每天吃1份苹果",
+          "action": "连续吃",
+          "note": "按每份200克、每袋1千克、每天1份换算，不按苹果个数估算。"
+        }
       }
     ],
     [
@@ -86,7 +114,14 @@
         "kind": "budget",
         "title": "生活预算参照",
         "note": "内置参考预算，不是全国均价或实时报价。",
-        "category": "daily"
+        "category": "daily",
+        "usage": {
+          "usesPerUnit": 5,
+          "perDay": 3,
+          "frequency": "每天吃三顿面",
+          "action": "连续吃",
+          "note": "场景假设：每顿使用100克干面条，500克一包可做5份，每天3份。不包含配菜；不是膳食建议。"
+        }
       }
     ],
     [
@@ -99,7 +134,14 @@
         "kind": "budget",
         "title": "生活预算参照",
         "note": "内置参考预算，不是全国均价或实时报价。",
-        "category": "daily"
+        "category": "daily",
+        "usage": {
+          "usesPerUnit": 1,
+          "perDay": 2,
+          "frequency": "每天喝2瓶",
+          "action": "连续喝",
+          "note": "按550毫升一瓶、每天2瓶换算，不代表每日饮水建议或全部饮水量。"
+        }
       }
     ],
     [
@@ -112,7 +154,14 @@
         "kind": "budget",
         "title": "生活预算参照",
         "note": "内置参考预算，不是全国均价或实时报价。",
-        "category": "daily"
+        "category": "daily",
+        "usage": {
+          "usesPerUnit": 80,
+          "perDay": 1,
+          "frequency": "每天洗1次衣服",
+          "action": "连续用",
+          "note": "按每次使用25克洗衣液、每瓶2千克换算；实际用量随产品和衣物量变化。"
+        }
       }
     ],
     [
@@ -125,7 +174,14 @@
         "kind": "budget",
         "title": "生活预算参照",
         "note": "内置参考预算，不是全国均价或实时报价。",
-        "category": "daily"
+        "category": "daily",
+        "usage": {
+          "usesPerUnit": 1,
+          "perDay": 1,
+          "frequency": "每天用1包",
+          "action": "连续用",
+          "note": "按100抽一包、每天1包换算，仅为使用场景假设。"
+        }
       }
     ],
     [
@@ -138,7 +194,15 @@
         "kind": "budget",
         "category": "digital",
         "title": "商品预算参照",
-        "note": "用于比较的可调整预算，不是全国均价或实时成交价。"
+        "note": "用于比较的可调整预算，不是全国均价或实时成交价。",
+        "usage": {
+          "mode": "rotation",
+          "usesPerUnit": 1,
+          "perDay": 1,
+          "frequency": "每天戴1副",
+          "action": "轮换使用",
+          "note": "按每天换用一个完整购买单位计算，不重复指不再次使用同一件物品，不代表款式不同，也不推断物品的使用寿命。"
+        }
       }
     ],
     [
@@ -151,7 +215,15 @@
         "kind": "budget",
         "category": "digital",
         "title": "商品预算参照",
-        "note": "用于比较的可调整预算，不是全国均价或实时成交价。"
+        "note": "用于比较的可调整预算，不是全国均价或实时成交价。",
+        "usage": {
+          "mode": "rotation",
+          "usesPerUnit": 1,
+          "perDay": 1,
+          "frequency": "每天用1把",
+          "action": "轮换使用",
+          "note": "按每天换用一个完整购买单位计算，不重复指不再次使用同一件物品，不代表款式不同，也不推断物品的使用寿命。"
+        }
       }
     ],
     [
@@ -164,7 +236,15 @@
         "kind": "budget",
         "category": "digital",
         "title": "商品预算参照",
-        "note": "用于比较的可调整预算，不是全国均价或实时成交价。"
+        "note": "用于比较的可调整预算，不是全国均价或实时成交价。",
+        "usage": {
+          "mode": "rotation",
+          "usesPerUnit": 1,
+          "perDay": 1,
+          "frequency": "每天用1个",
+          "action": "轮换使用",
+          "note": "按每天换用一个完整购买单位计算，不重复指不再次使用同一件物品，不代表款式不同，也不推断物品的使用寿命。"
+        }
       }
     ],
     [
@@ -177,7 +257,15 @@
         "kind": "budget",
         "category": "digital",
         "title": "商品预算参照",
-        "note": "用于比较的可调整预算，不是全国均价或实时成交价。"
+        "note": "用于比较的可调整预算，不是全国均价或实时成交价。",
+        "usage": {
+          "mode": "rotation",
+          "usesPerUnit": 1,
+          "perDay": 1,
+          "frequency": "每天换1个",
+          "action": "轮换使用",
+          "note": "按每天换用一个完整购买单位计算，不重复指不再次使用同一件物品，不代表款式不同，也不推断物品的使用寿命。"
+        }
       }
     ],
     [
@@ -190,7 +278,15 @@
         "kind": "budget",
         "category": "fashion",
         "title": "商品预算参照",
-        "note": "用于比较的可调整预算，不是全国均价或实时成交价。"
+        "note": "用于比较的可调整预算，不是全国均价或实时成交价。",
+        "usage": {
+          "mode": "rotation",
+          "usesPerUnit": 1,
+          "perDay": 1,
+          "frequency": "每天穿1双",
+          "action": "轮换使用",
+          "note": "按每天换用一个完整购买单位计算，不重复指不再次使用同一件物品，不代表款式不同，也不推断物品的使用寿命。"
+        }
       }
     ],
     [
@@ -203,7 +299,15 @@
         "kind": "budget",
         "category": "fashion",
         "title": "商品预算参照",
-        "note": "用于比较的可调整预算，不是全国均价或实时成交价。"
+        "note": "用于比较的可调整预算，不是全国均价或实时成交价。",
+        "usage": {
+          "mode": "rotation",
+          "usesPerUnit": 1,
+          "perDay": 1,
+          "frequency": "每天穿1件",
+          "action": "轮换使用",
+          "note": "按每天换用一个完整购买单位计算，不重复指不再次使用同一件物品，不代表款式不同，也不推断物品的使用寿命。"
+        }
       }
     ],
     [
@@ -216,7 +320,15 @@
         "kind": "budget",
         "category": "fashion",
         "title": "商品预算参照",
-        "note": "用于比较的可调整预算，不是全国均价或实时成交价。"
+        "note": "用于比较的可调整预算，不是全国均价或实时成交价。",
+        "usage": {
+          "mode": "rotation",
+          "usesPerUnit": 1,
+          "perDay": 1,
+          "frequency": "每天背1个",
+          "action": "轮换使用",
+          "note": "按每天换用一个完整购买单位计算，不重复指不再次使用同一件物品，不代表款式不同，也不推断物品的使用寿命。"
+        }
       }
     ],
     [
@@ -229,7 +341,15 @@
         "kind": "budget",
         "category": "fashion",
         "title": "商品预算参照",
-        "note": "用于比较的可调整预算，不是全国均价或实时成交价。"
+        "note": "用于比较的可调整预算，不是全国均价或实时成交价。",
+        "usage": {
+          "mode": "rotation",
+          "usesPerUnit": 1,
+          "perDay": 1,
+          "frequency": "每天戴1顶",
+          "action": "轮换使用",
+          "note": "按每天换用一个完整购买单位计算，不重复指不再次使用同一件物品，不代表款式不同，也不推断物品的使用寿命。"
+        }
       }
     ],
     [
@@ -242,7 +362,14 @@
         "kind": "budget",
         "category": "entertainment",
         "title": "商品预算参照",
-        "note": "用于比较的可调整预算，不是全国均价或实时成交价。"
+        "note": "用于比较的可调整预算，不是全国均价或实时成交价。",
+        "usage": {
+          "usesPerUnit": 1,
+          "perDay": 1,
+          "frequency": "每天看1场电影",
+          "action": "连续看",
+          "note": "按每张票供1人看1场、每天1场换算，仅为频率假设。"
+        }
       }
     ],
     [
@@ -255,7 +382,15 @@
         "kind": "budget",
         "category": "entertainment",
         "title": "商品预算参照",
-        "note": "用于比较的可调整预算，不是全国均价或实时成交价。"
+        "note": "用于比较的可调整预算，不是全国均价或实时成交价。",
+        "usage": {
+          "mode": "rotation",
+          "usesPerUnit": 1,
+          "perDay": 1,
+          "frequency": "每天读1本",
+          "action": "轮换使用",
+          "note": "按每天换用一个完整购买单位计算，不重复指不再次使用同一件物品，不代表款式不同，也不推断物品的使用寿命。"
+        }
       }
     ],
     [
@@ -268,7 +403,15 @@
         "kind": "budget",
         "category": "entertainment",
         "title": "商品预算参照",
-        "note": "用于比较的可调整预算，不是全国均价或实时成交价。"
+        "note": "用于比较的可调整预算，不是全国均价或实时成交价。",
+        "usage": {
+          "mode": "rotation",
+          "usesPerUnit": 1,
+          "perDay": 1,
+          "frequency": "每天用1个",
+          "action": "轮换使用",
+          "note": "按每天换用一个完整购买单位计算，不重复指不再次使用同一件物品，不代表款式不同，也不推断物品的使用寿命。"
+        }
       }
     ],
     [
@@ -294,7 +437,14 @@
         "kind": "budget",
         "category": "travel",
         "title": "商品预算参照",
-        "note": "用于比较的可调整预算，不是全国均价或实时成交价。"
+        "note": "用于比较的可调整预算，不是全国均价或实时成交价。",
+        "usage": {
+          "usesPerUnit": 1,
+          "perDay": 2,
+          "frequency": "每天往返各坐1次公交",
+          "action": "连续坐",
+          "note": "按每次为单人单程、每天往返共2次换算，不计换乘和票制优惠。"
+        }
       }
     ],
     [
@@ -307,7 +457,14 @@
         "kind": "budget",
         "category": "travel",
         "title": "商品预算参照",
-        "note": "用于比较的可调整预算，不是全国均价或实时成交价。"
+        "note": "用于比较的可调整预算，不是全国均价或实时成交价。",
+        "usage": {
+          "usesPerUnit": 1,
+          "perDay": 1,
+          "frequency": "每天住1晚",
+          "action": "连续住",
+          "note": "按每晚一间房、连续入住换算，不含其他费用。"
+        }
       }
     ],
     [
@@ -320,7 +477,15 @@
         "kind": "budget",
         "category": "travel",
         "title": "商品预算参照",
-        "note": "用于比较的可调整预算，不是全国均价或实时成交价。"
+        "note": "用于比较的可调整预算，不是全国均价或实时成交价。",
+        "usage": {
+          "mode": "rotation",
+          "usesPerUnit": 1,
+          "perDay": 1,
+          "frequency": "每天用1个",
+          "action": "轮换使用",
+          "note": "按每天换用一个完整购买单位计算，不重复指不再次使用同一件物品，不代表款式不同，也不推断物品的使用寿命。"
+        }
       }
     ],
     [
@@ -333,7 +498,15 @@
         "kind": "budget",
         "category": "sport",
         "title": "商品预算参照",
-        "note": "用于比较的可调整预算，不是全国均价或实时成交价。"
+        "note": "用于比较的可调整预算，不是全国均价或实时成交价。",
+        "usage": {
+          "mode": "rotation",
+          "usesPerUnit": 1,
+          "perDay": 1,
+          "frequency": "每天骑1辆",
+          "action": "轮换使用",
+          "note": "按每天换用一个完整购买单位计算，不重复指不再次使用同一件物品，不代表款式不同，也不推断物品的使用寿命。"
+        }
       }
     ],
     [
@@ -346,7 +519,15 @@
         "kind": "budget",
         "category": "sport",
         "title": "商品预算参照",
-        "note": "用于比较的可调整预算，不是全国均价或实时成交价。"
+        "note": "用于比较的可调整预算，不是全国均价或实时成交价。",
+        "usage": {
+          "mode": "rotation",
+          "usesPerUnit": 1,
+          "perDay": 1,
+          "frequency": "每天用1支",
+          "action": "轮换使用",
+          "note": "按每天换用一个完整购买单位计算，不重复指不再次使用同一件物品，不代表款式不同，也不推断物品的使用寿命。"
+        }
       }
     ],
     [
@@ -359,7 +540,15 @@
         "kind": "budget",
         "category": "sport",
         "title": "商品预算参照",
-        "note": "用于比较的可调整预算，不是全国均价或实时成交价。"
+        "note": "用于比较的可调整预算，不是全国均价或实时成交价。",
+        "usage": {
+          "mode": "rotation",
+          "usesPerUnit": 1,
+          "perDay": 1,
+          "frequency": "每天用1条",
+          "action": "轮换使用",
+          "note": "按每天换用一个完整购买单位计算，不重复指不再次使用同一件物品，不代表款式不同，也不推断物品的使用寿命。"
+        }
       }
     ],
     [
@@ -372,7 +561,15 @@
         "kind": "budget",
         "category": "sport",
         "title": "商品预算参照",
-        "note": "用于比较的可调整预算，不是全国均价或实时成交价。"
+        "note": "用于比较的可调整预算，不是全国均价或实时成交价。",
+        "usage": {
+          "mode": "rotation",
+          "usesPerUnit": 1,
+          "perDay": 1,
+          "frequency": "每天用1张",
+          "action": "轮换使用",
+          "note": "按每天换用一个完整购买单位计算，不重复指不再次使用同一件物品，不代表款式不同，也不推断物品的使用寿命。"
+        }
       }
     ],
     [
@@ -387,7 +584,15 @@
         "title": "Apple 中国大陆官网",
         "note": "按所列型号规格的官网公开报价比较，其他容量或颜色价格可能不同。",
         "url": "https://www.apple.com.cn/shop/buy-iphone/iphone-duo",
-        "checkedAt": "2026-10-31T10:07:22.523Z"
+        "checkedAt": "2026-10-31T10:07:22.523Z",
+        "usage": {
+          "mode": "rotation",
+          "usesPerUnit": 1,
+          "perDay": 1,
+          "frequency": "每天用1台",
+          "action": "轮换使用",
+          "note": "按每天换用一个完整购买单位计算，不重复指不再次使用同一件物品，不代表款式不同，也不推断物品的使用寿命。"
+        }
       }
     ]
   ]
