@@ -1,0 +1,394 @@
+{
+  "version": "2026-10-31.2",
+  "checkedAt": "2026-10-31",
+  "baseline": {
+    "year": 2025,
+    "income": 5965.833333333333,
+    "annualWage": 71590,
+    "savingsIncome": 3614.75,
+    "expense": 2456.3333333333335,
+    "annualDisposableIncome": 43377,
+    "annualConsumption": 29476,
+    "incomeLabel": "全国城镇私营单位就业人员年平均工资",
+    "savingsLabel": "全国居民人均可支配收入与消费支出差额",
+    "wageSource": {
+      "title": "2025年城镇单位就业人员年平均工资情况",
+      "url": "https://www.stats.gov.cn/sj/zxfb/202605/t20260515_1963707.html",
+      "publishedAt": "2026-05-15"
+    },
+    "householdSource": {
+      "title": "2025年居民收入和消费支出情况",
+      "url": "https://www.stats.gov.cn/sj/zxfb/202601/t20260119_1962321.html",
+      "publishedAt": "2026-01-19"
+    },
+    "notes": "工资为税前劳动报酬，不能当作到手收入；储蓄卡采用全国居民收入与消费差额模型，不能代表个人真实储蓄，也不将两种不同人群的数据混为同一个人的收支。"
+  },
+  "references": [
+    [
+      "大米",
+      "袋",
+      65,
+      "5千克／袋",
+      "rice",
+      {
+        "kind": "budget",
+        "title": "生活预算参照",
+        "note": "内置参考预算，不是全国均价或实时报价。",
+        "category": "daily"
+      }
+    ],
+    [
+      "纯牛奶",
+      "盒",
+      4,
+      "250毫升／盒",
+      "milk",
+      {
+        "kind": "budget",
+        "title": "生活预算参照",
+        "note": "内置参考预算，不是全国均价或实时报价。",
+        "category": "daily"
+      }
+    ],
+    [
+      "鸡蛋",
+      "盒",
+      15,
+      "10枚／盒",
+      "egg",
+      {
+        "kind": "budget",
+        "title": "生活预算参照",
+        "note": "内置参考预算，不是全国均价或实时报价。",
+        "category": "daily"
+      }
+    ],
+    [
+      "苹果",
+      "袋",
+      12,
+      "1千克／袋",
+      "apple",
+      {
+        "kind": "budget",
+        "title": "生活预算参照",
+        "note": "内置参考预算，不是全国均价或实时报价。",
+        "category": "daily"
+      }
+    ],
+    [
+      "面条",
+      "包",
+      8,
+      "500克／包",
+      "noodles",
+      {
+        "kind": "budget",
+        "title": "生活预算参照",
+        "note": "内置参考预算，不是全国均价或实时报价。",
+        "category": "daily"
+      }
+    ],
+    [
+      "饮用水",
+      "瓶",
+      2,
+      "550毫升／瓶",
+      "water",
+      {
+        "kind": "budget",
+        "title": "生活预算参照",
+        "note": "内置参考预算，不是全国均价或实时报价。",
+        "category": "daily"
+      }
+    ],
+    [
+      "洗衣液",
+      "瓶",
+      30,
+      "2千克／瓶",
+      "laundry",
+      {
+        "kind": "budget",
+        "title": "生活预算参照",
+        "note": "内置参考预算，不是全国均价或实时报价。",
+        "category": "daily"
+      }
+    ],
+    [
+      "抽纸",
+      "包",
+      5,
+      "100抽／包",
+      "tissue",
+      {
+        "kind": "budget",
+        "title": "生活预算参照",
+        "note": "内置参考预算，不是全国均价或实时报价。",
+        "category": "daily"
+      }
+    ],
+    [
+      "无线耳机",
+      "副",
+      299,
+      "入门款无线耳机／副",
+      "headphones",
+      {
+        "kind": "budget",
+        "category": "digital",
+        "title": "商品预算参照",
+        "note": "用于比较的可调整预算，不是全国均价或实时成交价。"
+      }
+    ],
+    [
+      "机械键盘",
+      "把",
+      199,
+      "入门款机械键盘／把",
+      "keyboard",
+      {
+        "kind": "budget",
+        "category": "digital",
+        "title": "商品预算参照",
+        "note": "用于比较的可调整预算，不是全国均价或实时成交价。"
+      }
+    ],
+    [
+      "充电宝",
+      "个",
+      99,
+      "10000毫安时／个",
+      "powerbank",
+      {
+        "kind": "budget",
+        "category": "digital",
+        "title": "商品预算参照",
+        "note": "用于比较的可调整预算，不是全国均价或实时成交价。"
+      }
+    ],
+    [
+      "手机壳",
+      "个",
+      30,
+      "普通保护壳／个",
+      "phone",
+      {
+        "kind": "budget",
+        "category": "digital",
+        "title": "商品预算参照",
+        "note": "用于比较的可调整预算，不是全国均价或实时成交价。"
+      }
+    ],
+    [
+      "运动鞋",
+      "双",
+      399,
+      "日常运动鞋／双",
+      "shoes",
+      {
+        "kind": "budget",
+        "category": "fashion",
+        "title": "商品预算参照",
+        "note": "用于比较的可调整预算，不是全国均价或实时成交价。"
+      }
+    ],
+    [
+      "T恤",
+      "件",
+      99,
+      "基础款T恤／件",
+      "shirt",
+      {
+        "kind": "budget",
+        "category": "fashion",
+        "title": "商品预算参照",
+        "note": "用于比较的可调整预算，不是全国均价或实时成交价。"
+      }
+    ],
+    [
+      "帆布包",
+      "个",
+      59,
+      "普通帆布包／个",
+      "bag",
+      {
+        "kind": "budget",
+        "category": "fashion",
+        "title": "商品预算参照",
+        "note": "用于比较的可调整预算，不是全国均价或实时成交价。"
+      }
+    ],
+    [
+      "棒球帽",
+      "顶",
+      49,
+      "普通棒球帽／顶",
+      "cap",
+      {
+        "kind": "budget",
+        "category": "fashion",
+        "title": "商品预算参照",
+        "note": "用于比较的可调整预算，不是全国均价或实时成交价。"
+      }
+    ],
+    [
+      "电影票",
+      "张",
+      45,
+      "普通影厅单人票／张",
+      "movie",
+      {
+        "kind": "budget",
+        "category": "entertainment",
+        "title": "商品预算参照",
+        "note": "用于比较的可调整预算，不是全国均价或实时成交价。"
+      }
+    ],
+    [
+      "图书",
+      "本",
+      35,
+      "普通平装图书／本",
+      "book",
+      {
+        "kind": "budget",
+        "category": "entertainment",
+        "title": "商品预算参照",
+        "note": "用于比较的可调整预算，不是全国均价或实时成交价。"
+      }
+    ],
+    [
+      "游戏手柄",
+      "个",
+      249,
+      "入门款游戏手柄／个",
+      "game",
+      {
+        "kind": "budget",
+        "category": "entertainment",
+        "title": "商品预算参照",
+        "note": "用于比较的可调整预算，不是全国均价或实时成交价。"
+      }
+    ],
+    [
+      "演唱会门票",
+      "张",
+      580,
+      "普通看台单人票／张，不含交通住宿",
+      "ticket",
+      {
+        "kind": "budget",
+        "category": "entertainment",
+        "title": "商品预算参照",
+        "note": "用于比较的可调整预算，不是全国均价或实时成交价。"
+      }
+    ],
+    [
+      "城市公交出行",
+      "次",
+      2,
+      "单人单程／次，城市票制不同",
+      "bus",
+      {
+        "kind": "budget",
+        "category": "travel",
+        "title": "商品预算参照",
+        "note": "用于比较的可调整预算，不是全国均价或实时成交价。"
+      }
+    ],
+    [
+      "周末住宿",
+      "晚",
+      300,
+      "普通酒店一间一晚，不含交通",
+      "hotel",
+      {
+        "kind": "budget",
+        "category": "travel",
+        "title": "商品预算参照",
+        "note": "用于比较的可调整预算，不是全国均价或实时成交价。"
+      }
+    ],
+    [
+      "行李箱",
+      "个",
+      299,
+      "普通20英寸登机箱／个",
+      "suitcase",
+      {
+        "kind": "budget",
+        "category": "travel",
+        "title": "商品预算参照",
+        "note": "用于比较的可调整预算，不是全国均价或实时成交价。"
+      }
+    ],
+    [
+      "自行车",
+      "辆",
+      799,
+      "入门城市自行车／辆",
+      "bicycle",
+      {
+        "kind": "budget",
+        "category": "sport",
+        "title": "商品预算参照",
+        "note": "用于比较的可调整预算，不是全国均价或实时成交价。"
+      }
+    ],
+    [
+      "羽毛球拍",
+      "支",
+      129,
+      "入门款球拍／支",
+      "racket",
+      {
+        "kind": "budget",
+        "category": "sport",
+        "title": "商品预算参照",
+        "note": "用于比较的可调整预算，不是全国均价或实时成交价。"
+      }
+    ],
+    [
+      "跳绳",
+      "条",
+      25,
+      "普通运动跳绳／条",
+      "rope",
+      {
+        "kind": "budget",
+        "category": "sport",
+        "title": "商品预算参照",
+        "note": "用于比较的可调整预算，不是全国均价或实时成交价。"
+      }
+    ],
+    [
+      "瑜伽垫",
+      "张",
+      79,
+      "普通运动瑜伽垫／张",
+      "mat",
+      {
+        "kind": "budget",
+        "category": "sport",
+        "title": "商品预算参照",
+        "note": "用于比较的可调整预算，不是全国均价或实时成交价。"
+      }
+    ],
+    [
+      "iPhone Duo",
+      "台",
+      15999,
+      "iPhone Duo 256GB Night Sky",
+      "phone",
+      {
+        "kind": "official",
+        "category": "digital",
+        "title": "Apple 中国大陆官网",
+        "note": "按所列型号规格的官网公开报价比较，其他容量或颜色价格可能不同。",
+        "url": "https://www.apple.com.cn/shop/buy-iphone/iphone-duo",
+        "checkedAt": "2026-10-31T10:07:22.523Z"
+      }
+    ]
+  ]
+}

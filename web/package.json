@@ -1,0 +1,16 @@
+{
+  "name": "pomo-web",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "prestart": "node scripts/build.mjs",
+    "start": "node server.mjs",
+    "test": "node --test test/*.test.mjs",
+    "verify:web": "node test/browser.cjs"
+  }
+}

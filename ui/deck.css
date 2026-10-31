@@ -1,0 +1,15 @@
+/* A physical deck: the active card sits above two visible layers. */
+.rail.deck{display:block;position:relative;margin:0 25px;padding:0;overflow:visible;scroll-snap-type:none;touch-action:pan-y;cursor:grab;isolation:isolate;transition:height .2s ease;outline-offset:5px}
+.deck .card{position:absolute;top:23px;left:0;width:100%;margin:0;min-height:340px;transform-origin:50% 15%;will-change:transform;backface-visibility:hidden;transition:transform .32s cubic-bezier(.2,.75,.25,1),opacity .22s ease,box-shadow .25s;box-shadow:0 9px 24px #354d3510;user-select:none;-webkit-user-select:none}
+.deck .card.is-front{cursor:grab;box-shadow:0 8px 24px #344c3410}
+.deck .card.is-behind{pointer-events:none;box-shadow:0 3px 9px #344c3408}
+.deck .card.is-away{visibility:hidden;pointer-events:none;opacity:0}
+.deck .card.is-returning{visibility:visible;pointer-events:none;transition:none}
+.deck .card.is-recycling{visibility:visible;pointer-events:none;transition:none}
+.deck.is-dragging,.deck.is-dragging .is-front{cursor:grabbing}
+.deck.is-dragging .is-front{transition:none;box-shadow:0 18px 35px #344c3420}
+.deck .card.is-leaving{pointer-events:none;transition:transform .26s cubic-bezier(.3,.1,.6,.8),opacity .26s}
+.deck-hint{display:flex;align-items:center;justify-content:center;gap:9px;font-size:9px;color:#8c987f;margin:4px 25px 9px;min-height:17px;letter-spacing:.4px}
+.deck-hint span{font-size:12px;color:#a5b097}.deck+.carousel-nav{margin-top:2px}.deck .card:focus-visible{outline:2px solid #b17b53;outline-offset:3px}
+@media(max-height:760px){.deck .card{min-height:300px}.deck-hint{margin-top:2px;margin-bottom:6px}}
+@media(prefers-reduced-motion:reduce){.rail.deck,.deck .card,.deck .card.is-leaving{transition:none!important}}

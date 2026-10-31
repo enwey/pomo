@@ -1,0 +1,22 @@
+# Local browser profiles, test output and dependencies
+**/.qa/
+**/.render-profile/
+**/node_modules/
+**/playwright-report/
+**/test-results/
+*.log
+
+# Secrets and machine-specific configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store
+Thumbs.db
+
+# Generated web build and delivery/design exports
+/web/public/
+/*.zip
+/ui/screens/
+/ui/*.png

@@ -1,0 +1,17 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {once} from 'node:events';import {createApp} from '../server.mjs';import {chooseProviders,parseApple,parseAppleIndex,filterOffers} from '../catalog.mjs';
+test('具体型号优先，未知商品不伪造候选',()=>{assert.equal(chooseProviders('iPhone 17e')[0].name,'iPhone 17e');assert.equal(chooseProviders('手机').length,3);assert.equal(chooseProviders('火星餐厅服务').length,0)});
+test('Duo大小写、空格和容量描述均命中正确官网',()=>{for(const q of ['iPhone duo','IPHONE DUO','iphoneDuo','苹果duo','iPhone Duo 512GB']){const p=chooseProviders(q);assert.equal(p.length,1);assert.equal(p[0].name,'iPhone Duo');assert.equal(p[0].url,'https://www.apple.com.cn/shop/buy-iphone/iphone-duo')}});
+test('按官网目录发现新机型，并拒绝外站伪目录',()=>{const p=parseAppleIndex('<a href="https://www.apple.com.cn/shop/buy-iphone/iphone-19-pro">new</a><a href="https://evil.example/shop/buy-iphone/iphone-19">bad</a>');assert.equal(p.length,1);assert.equal(chooseProviders('iPhone 19',p)[0].name,'iPhone 19 Pro');assert.equal(chooseProviders('iPhone 190',p).length,0)});
+test('18系列匹配、Pro Max和容量过滤不混淆',()=>{assert.equal(chooseProviders('iPhone 18')[0].name,'iPhone 18 Pro');assert.equal(chooseProviders('iPhone 18 Pro Max 256GB')[0].name,'iPhone 18 Pro');const rows=[{title:'iPhone 18 Pro 256GB Black',price:9999},{title:'iPhone 18 Pro Max 256GB Black',price:10999},{title:'iPhone 18 Pro Max 512GB Black',price:12999}];assert.equal(filterOffers('iPhone 18',rows).length,3);assert.equal(filterOffers('iPhone 18 Pro',rows).length,1);assert.equal(filterOffers('iPhone 18 Pro Max 256GB',rows)[0].price,10999);assert.equal(filterOffers('iPhone 18 标准版',rows).length,0)});
+test('官网完整商品价格结构才作为报价，页面年份和月供不提取',()=>{const p={url:'https://www.apple.com.cn/shop/buy-iphone/iphone-17'},html='年份2026 每月284 RMB 999 <script>{"sku":"A","partNumber":"ACH/A","price":{"fullPrice":6799.00},"category":"iphone","name":"iPhone 17 256GB Sage"}</script>';const r=parseApple(html,p,'2026-10-31T00:00:00Z');assert.equal(r.length,1);assert.equal(r[0].price,6799);assert.equal(r[0].sku,'ACH/A');assert.equal(r[0].checkedAt,'2026-10-31T00:00:00Z');assert.equal(parseApple('2026 ￥5999',p).length,0)});
+test('HTTP API、异常请求和文件边界',async()=>{const fake=async()=>new Response('{"sku":"TEST","partNumber":"TESTCH/A","price":{"fullPrice":6799},"category":"iphone","name":"iPhone 17 256GB Sage"}');const app=createApp({fetcher:fake,searcher:async()=>({offers:[],sources:[],message:'无报价'})});app.listen(0,'127.0.0.1');await once(app,'listening');const base='http://127.0.0.1:'+app.address().port;try{
+ assert.equal((await fetch(base+'/api/health').then(r=>r.json())).ok,true);
+ assert.equal((await fetch(base+'/api/baseline').then(r=>r.json())).baseline.year,2025);
+ assert.equal((await fetch(base+'/api/search?q=iPhone17').then(r=>r.json())).offers[0].price,6799);
+ assert.equal((await fetch(base+'/api/search?q=unknown').then(r=>r.json())).offers.length,0);
+ assert.equal((await fetch(base+'/api/search?q=')).status,400);
+ assert.equal((await fetch(base+'/api/unknown')).status,404);
+ assert.equal((await fetch(base+'/',{method:'POST'})).status,405);
+ for(const p of ['/package.json','/server.mjs','/..%5cserver.mjs','/%00','/%2e%2e%2fserver.mjs'])assert.ok((await fetch(base+p)).status>=400,p);
+ const index=await fetch(base+'/');assert.equal(index.status,200);assert.match(index.headers.get('content-security-policy'),/frame-ancestors 'none'/);assert.match(await index.text(),/pomo/);
+}finally{await new Promise(resolve=>app.close(resolve))}});

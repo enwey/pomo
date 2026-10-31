@@ -1,0 +1,40 @@
+/* Ten pages, ten compositions. Ink, palette and navigation remain shared. */
+.result-minimal [data-story] .number{color:#171717;-webkit-text-stroke:0;text-shadow:none;font-family:"Arial Black",Arial,"Microsoft YaHei",sans-serif;font-weight:900;font-size:clamp(54px,17vw,74px);min-height:87px;letter-spacing:-2px;line-height:1.1}
+.result-minimal [data-story] .number:before{clip-path:none;filter:none;opacity:1}.result-minimal [data-story] .number small{font-size:15px}
+.result-minimal [data-story] .art{min-height:80px}
+/* 01 — bound desk calendar. */
+.result-minimal .story-work .number{padding:22px 18px 10px;background:#fffdf6;border:2px solid #171717;box-shadow:4px 4px 0 #171717;transform:rotate(-3deg);margin-top:19px}
+.result-minimal .story-work .number:before{inset:0 0 auto;height:13px;background:#171717;z-index:0}
+.result-minimal .story-work .number:after{content:'';position:absolute;top:-7px;left:19px;width:5px;height:15px;border:1.5px solid #171717;background:#fffdf6;box-shadow:55px 0 0 -1px #fffdf6,55px 0 0 .5px #171717}
+.result-minimal .story-work h2{transform:rotate(1deg)}.result-minimal .story-work .art{transform:rotate(1deg)}
+/* 02 — a large coin with a stamped rim. */
+.result-minimal .story-save .number{padding:23px 20px;background:#fff2a2;border:3px solid #171717;border-radius:50%;transform:rotate(3deg);box-shadow:5px 4px 0 #171717;min-height:120px;margin-top:18px}
+.result-minimal .story-save .number:before{inset:5px;border:1px dashed #171717;background:none;border-radius:50%;z-index:-1}
+.result-minimal .story-save .art{transform:rotate(-2deg);max-height:340px}.result-minimal .story-save h2{align-self:flex-end;transform:rotate(2deg);margin-top:13px}
+/* 03 — a tear-off market receipt. */
+.result-minimal .story-rice .number{font-family:"Courier New","Microsoft YaHei",monospace;padding:13px 16px 23px;border:2px solid #171717;background:#fffdf6;transform:rotate(-2deg);clip-path:polygon(0 0,100% 0,100% 94%,94% 100%,88% 94%,82% 100%,76% 94%,70% 100%,64% 94%,58% 100%,52% 94%,46% 100%,40% 94%,34% 100%,28% 94%,22% 100%,16% 94%,10% 100%,4% 94%,0 100%)}
+.result-minimal .story-rice .number:before{display:none}.result-minimal .story-rice h2{align-self:flex-end}.result-minimal .story-rice .art{transform:rotate(2deg)}
+/* 04 — a milk-carton label. */
+.result-minimal .story-milk .number{padding:13px 19px;background:#fffdf6;border:3px solid #171717;box-shadow:7px 5px 0 #4c9fcf;transform:skew(-5deg) rotate(-1deg)}
+.result-minimal .story-milk .number:before{inset:3px auto 3px 3px;width:4px;background:#171717;z-index:0}.result-minimal .story-milk .number small{border-left:2px solid #171717;padding-left:9px}.result-minimal .story-milk h2{background:#fffdf6;color:#171717;border:2px solid #171717;box-shadow:3px 3px 0 #171717}.result-minimal .story-milk .art{transform:rotate(-1deg)}
+/* 05 — a hand-stamped oval. */
+.result-minimal .story-egg .number{background:#fffdf6;padding:18px 24px;border:3px dashed #171717;border-radius:48% 52% 46% 54%;transform:rotate(-7deg);margin-top:22px}
+.result-minimal .story-egg .number:before{inset:5px;background:none;border:1px solid #171717;border-radius:50%}.result-minimal .story-egg .art{transform:rotate(3deg)}.result-minimal .story-egg h2{transform:rotate(-3deg);align-self:flex-end}
+/* 06 — a hanging fruit-market price tag. */
+.result-minimal .story-apple .number{background:#fffdf6;border:2px solid #171717;padding:16px 20px 16px 32px;transform:rotate(4deg);clip-path:polygon(17px 0,100% 0,100% 100%,17px 100%,0 50%)}
+.result-minimal .story-apple .number:before{inset:auto;left:8px;top:calc(50% - 4px);width:8px;height:8px;background:#171717;border-radius:50%;z-index:0}.result-minimal .story-apple .art{transform:rotate(-2deg)}.result-minimal .story-apple .caption{transform:rotate(1deg)}
+/* 07 — a big speech bubble above a steaming bowl. */
+.result-minimal .story-noodles .number{background:#fffdf6;border:3px solid #171717;border-radius:43% 45% 42% 7%;padding:16px 25px 18px;box-shadow:4px 4px 0 #171717;transform:rotate(-3deg)}
+.result-minimal .story-noodles .number:before{display:none}.result-minimal .story-noodles .number:after{content:'';position:absolute;width:13px;height:14px;background:#fffdf6;border-right:3px solid #171717;border-bottom:3px solid #171717;bottom:-10px;left:18px;transform:skewY(30deg)}.result-minimal .story-noodles h2{align-self:flex-end}.result-minimal .story-noodles .art{transform:rotate(1deg)}
+/* 08 — a water splash silhouette. */
+.result-minimal .story-water .number{padding:15px 26px;color:#fffdf6;-webkit-text-stroke:1.5px #171717;text-shadow:3px 3px 0 #171717;background:#4eabd5;transform:rotate(3deg);clip-path:polygon(4% 12%,23% 18%,30% 0,44% 13%,63% 0,72% 18%,94% 10%,88% 36%,100% 52%,88% 67%,96% 92%,71% 84%,59% 100%,43% 87%,22% 99%,19% 79%,0 88%,9% 58%,0 43%,11% 31%)}
+.result-minimal .story-water .number:before{display:none}.result-minimal .story-water .number small{color:#fffdf6;-webkit-text-stroke:0;text-shadow:1px 1px 0 #171717}.result-minimal .story-water .art{transform:rotate(-2deg)}.result-minimal .story-water h2{transform:rotate(2deg)}
+/* 09 — a washing-machine counter. */
+.result-minimal .story-laundry .number{font-family:"Courier New","Microsoft YaHei",monospace;background:#171717;color:#fffdf6;border:4px solid #fffdf6;outline:2px solid #171717;padding:13px 18px;box-shadow:5px 5px 0 #171717;letter-spacing:-3px;transform:rotate(-1deg)}
+.result-minimal .story-laundry .number:before{display:none}.result-minimal .story-laundry .number small{color:#fffdf6;font-family:"Microsoft YaHei",sans-serif}.result-minimal .story-laundry h2{align-self:flex-end}.result-minimal .story-laundry .art{transform:rotate(2deg)}
+/* 10 — a perforated household coupon. */
+.result-minimal .story-tissue .number{background:#fffdf6;border:2px dashed #171717;padding:14px 24px;transform:rotate(-4deg);box-shadow:4px 4px 0 #171717}
+.result-minimal .story-tissue .number:before,.result-minimal .story-tissue .number:after{content:'';position:absolute;width:12px;height:14px;background:var(--sand);border:1.5px solid #171717;border-radius:50%;z-index:0;inset:calc(50% - 7px) auto auto -8px;clip-path:none}.result-minimal .story-tissue .number:after{left:auto;right:-8px}.result-minimal .story-tissue h2{transform:rotate(2deg)}.result-minimal .story-tissue .art{transform:rotate(-1deg)}
+.result-minimal [data-story] .number.is-long{font-size:clamp(30px,10vw,45px);letter-spacing:-1px;flex-wrap:wrap}.result-minimal [data-story] .number.is-state{font-size:clamp(30px,10vw,42px);letter-spacing:-1px}
+@media(max-height:760px){.result-minimal [data-story] .number{font-size:55px;min-height:72px;margin-top:13px;margin-bottom:8px}.result-minimal .story-save .number{min-height:96px;padding:18px 15px}.result-minimal .story-egg .number{padding:14px 20px}.result-minimal [data-story] .number small{font-size:13px}.result-minimal [data-story] .art{min-height:65px}.result-minimal .story-work .number{padding-top:18px}.result-minimal [data-story] .number.is-long,.result-minimal [data-story] .number.is-state{font-size:32px}}
+.result-minimal [data-story] .number.is-long{font-size:clamp(20px,6.5vw,28px);letter-spacing:-1px}

@@ -1,0 +1,21 @@
+/* One screen, one card. Controls stay secondary. */
+.phone:has(.result-minimal){height:100dvh;min-height:0;padding:0 0 env(safe-area-inset-bottom);display:flex;flex-direction:column;border-radius:0;margin:0 auto;border:0;box-shadow:none}
+.phone:has(.result-minimal)>.top{display:none}.phone:has(.result-minimal)>#view{flex:1;min-height:0;display:flex;flex-direction:column}
+.result-minimal{display:flex;flex-direction:column;flex:1;min-height:0;padding:8px 0 2px}
+.minimal-toolbar{height:44px;flex-shrink:0;display:flex;align-items:center;justify-content:space-between;padding:0 17px;gap:12px}
+.minimal-icon{display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;color:#65805b}.minimal-icon .ui-icon{width:19px;height:19px}
+.minimal-amount{font-size:13px;letter-spacing:.2px;color:#65785a;padding:9px 15px;display:flex;gap:6px;align-items:center;border-radius:20px}.minimal-amount .ui-icon{width:11px;height:11px;opacity:.6}
+.result-minimal .rail.deck{flex:1;min-height:0;margin:0 17px;height:auto!important;width:auto}
+.result-minimal .deck .card{top:21px;height:calc(100% - 31px);min-height:0;padding:27px 27px 22px;display:flex;flex-direction:column;border-radius:29px}
+.result-minimal .card-top{font-size:10px;flex-shrink:0;line-height:1.8}
+.card-context{display:flex;align-items:center;gap:7px;margin-top:35px;font-size:11px;color:#81916f;flex-shrink:0}.card-context button{color:#70885f;font-size:10px;padding:6px 9px;margin-left:-9px;border-radius:12px;background:#ffffff55}
+.result-minimal .card .number{font-size:clamp(58px,18vw,78px);margin:8px 0 0;line-height:1.16;letter-spacing:-3px;flex-shrink:0}.result-minimal .card .number small{font-size:18px;margin-left:9px;letter-spacing:0}
+.result-minimal .card h2{font-size:15px;letter-spacing:.4px;margin:9px 0 0;line-height:1.7;flex-shrink:0}.result-minimal .card .art{flex:1;min-height:100px;height:0;max-height:370px;object-fit:contain;margin:14px 0 18px;width:100%}
+.result-minimal .card .caption{font-size:11px!important;line-height:1.9;min-height:0!important;flex-shrink:0;color:#7b886c;margin-bottom:10px}
+.result-minimal .source{font-size:9px;min-height:32px;align-self:flex-start;flex-shrink:0;border:0;padding:5px 0;color:#8a977d}
+.minimal-footer{height:30px;flex-shrink:0;display:flex;align-items:center;justify-content:center;padding:0 25px}.minimal-footer .dot,.minimal-footer .dot.on{width:20px;height:28px}.minimal-footer .dots{justify-content:center}
+.mode-options{display:flex;flex-direction:column;gap:9px;margin:17px 0}.mode-options button{font-size:13px;padding:16px;text-align:left;border-radius:14px;border:1px solid #dfe6d5;display:flex;justify-content:space-between;align-items:center}.mode-options button.selected{background:#edf2e5;border-color:#8fa67e}.mode-options small{font-size:10px;color:#8b997e}.minimal-history{display:flex;align-items:center;gap:8px;font-size:10px;color:#8b957f;justify-content:center;margin-top:9px}.minimal-history button{font-size:10px;color:#63805a;text-decoration:underline}
+.home>.eyebrow,.home>.examples,.home>.bottom-note{display:none}.home{padding-top:25px}.home .scene{height:235px;margin-top:18px;margin-bottom:26px}.home .search{margin-top:9px}.flow>.steps{display:none}
+@media(min-width:600px){.phone:has(.result-minimal){height:min(100dvh,920px)}.result-minimal .card .number{font-size:78px}}
+@media(max-height:760px){.minimal-toolbar{height:40px}.result-minimal{padding-top:4px}.result-minimal .deck .card{padding:21px 24px 15px}.card-context{margin-top:23px}.result-minimal .card .number{font-size:61px}.result-minimal .card .art{min-height:85px;margin:6px 0 10px}.result-minimal .card h2{font-size:14px}.result-minimal .card .caption{font-size:10px!important;margin-bottom:4px}.minimal-footer{height:26px}.home .scene{height:195px;margin:9px 0 15px}}
+@media(max-height:600px){.phone:has(.result-minimal){height:auto;min-height:100dvh}.result-minimal .rail.deck{min-height:490px}.card-context{margin-top:15px}}
